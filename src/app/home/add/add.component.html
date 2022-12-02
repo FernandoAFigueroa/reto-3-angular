@@ -1,0 +1,56 @@
+<div class="add-container">
+  <div class="form-wrapper">
+    <h3>Agrega un juego</h3>
+    <p class="mb-4">Lorem ipsum dolor sit amet elit. Sapiente sit aut eos consectetur adipisicing.</p>
+    <form class="row g-3" [formGroup]=" addGameCardForm" (ngSubmit)="onSubmit()">
+      <div class="row g-4">
+        <div class="col-md">
+          <div class="form-floating">
+            <input type="text" class="form-control" id="floatingInputGrid"
+              placeholder="Ingresa el título del videojuego" value="" formControlName="title">
+            <label for="floatingInputGrid">Ingresa el título del videojuego</label>
+          </div>
+        </div>
+        <div class="col-md">
+          <div class="form-floating">
+            <select class="form-select" id="floatingSelectGrid" aria-label="Clasificación" formControlName="rating">
+              <option [ngValue]="null" disabled>Selecciona un rating</option>
+              <option *ngFor="let rating of ratings" [ngValue]="rating.value" [ngValue]="rating.value">
+                {{ rating.text }}
+              </option>
+            </select>
+            <label for="floatingSelectGrid">Escoge un rating</label>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 form-floating">
+        <textarea class="form-control" placeholder="Descripción del videojuego" id="floatingTextarea" rows="10"
+          formControlName="description"></textarea>
+        <label for="floatingTextarea">Descripción del videojuego</label>
+      </div>
+      <div class="row g-3">
+        <div class="col">
+          <input type="date" class="form-control" placeholder="Rating" name="releaseDate" aria-label="Rating"
+            formControlName="releaseDate">
+        </div>
+        <div class="col">
+          <input type="number" class="form-control" placeholder="Número de descargas" aria-label="Downloads" min="0"
+            formControlName="downloads">
+        </div>
+      </div>
+      <div class="row g-3">
+        <div class="col-md form-check">
+          <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" name="comingSoon"
+            formControlName="comingSoon">
+          <label class="form-check-label" for="flexCheckDefault">
+            Próximamente
+          </label>
+        </div>
+        <div class="d-grid gap-2 col-6 mx-auto">
+          <button type="submit" class="btn btn-primary">Agregar videojuego</button>
+        </div>
+      </div>
+    </form>
+
+  </div>
+</div>

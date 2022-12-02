@@ -1,0 +1,22 @@
+.add-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 94vh;
+  opacity: 0.9;
+  background-size: cover;
+  background-image: url(../../../assets/images/background2.jpeg);
+}
+
+.add-container .form-wrapper {
+  position: relative;
+  width: 100%;
+  padding: 0 1rem;
+  display: flex;
+  flex-direction: column;
+  max-width: 750px;
+  padding: 1.5rem;
+  background-color: #c6d8e0a3;
+  border-color: 0.5x solid #eee;
+  border-radius: 5px;
+}

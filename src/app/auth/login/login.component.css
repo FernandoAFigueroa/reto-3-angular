@@ -1,0 +1,24 @@
+@import url("https://fonts.googleapis.com/css?family=Numans");
+
+/* Container */
+.h-custom {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-size: cover;
+  position: relative;
+  background-image: url(../../../assets/images/background3.jpeg);
+  opacity: 0.85;
+  font-family: "Numans", sans-serif;
+}
+.custom-login-form {
+  background-color: rgba(149, 150, 157, 0.85);
+}
+.login-form-img {
+  border-top-left-radius: 0.3rem;
+  border-top-right-radius: 0.3rem;
+  background-size: cover;
+  position: relative;
+  opacity: 0.9;
+}
